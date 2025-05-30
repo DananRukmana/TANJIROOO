@@ -87,7 +87,7 @@ def proses_3_tahap(img):
     # Tahap 3: Cek kesegaran ikan
     hasil3, skor3 = prediksi_model(img, model_kesegaran, 0.5, 'Tidak Segar', 'Segar')
     st.markdown('<div class="success">✅ Gambar valid. Sistem memproses prediksi kesegaran...</div>', unsafe_allow_html=True)
-    st.markdown(f'<div class="result-box">🧪 Hasil Prediksi: <strong>{hasil3}</strong><br>📊 Skor: {skor3:.4f}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="result-box">🧪 Hasil Prediksi: <strong>{hasil3}</strong><br>📊 Tingkat akurasi: {skor3:.4f}</div>', unsafe_allow_html=True)
 
 # ====== Pilihan Metode Input ======
 metode = st.radio("Pilih Metode Input Gambar", ("📷 Scan Kamera", "📁 Upload File"), horizontal=True)
